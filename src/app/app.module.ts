@@ -14,8 +14,8 @@ import {FormsModule} from '@angular/forms';
 import{RouterModule} from '@angular/router'
 
 const routes=[
-  {path:'/',component:HomeComponent},
-  {path:'/cart',component:CartComponent}
+  {path:'',component:HomeComponent},
+  {path:'cart',component:CartComponent}
 ]
 
   
