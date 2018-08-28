@@ -8,7 +8,15 @@ import { CounterComponent } from './counter/counter.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { UserService } from './user.service';
-import { FormsModule }   from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
+import {FormsModule} from '@angular/forms';
+import{RouterModule} from '@angular/router'
+
+const routes=[
+  {path:'/',component:HomeComponent},
+  {path:'/cart',component:CartComponent}
+]
 
   
 
@@ -19,12 +27,15 @@ import { FormsModule }   from '@angular/forms';
     NewComponent,
     CounterComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
     
   ],
   providers: [UserService],
