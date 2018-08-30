@@ -3,8 +3,10 @@
   <h1>
     Users {{ title }}!
   </h1>
-  <a routerLink=''>Home</a>
-  <a routerLink='cart'>Cart</a>
+  <div class='menu d-flex justify-content-start'>
+  <a routerLink=''routerLinkActive='active' [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a routerLink='cart' routerLinkActive='active'>Cart</a>
+  </div>
   <router-outlet></router-outlet>
   <!-- <h2>Count:{{counter}}</h2> -->
   <div class="container-fluid">
